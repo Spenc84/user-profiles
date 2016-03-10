@@ -5,10 +5,11 @@ angular.module('userProfiles')
 		friendService.login(user).then(function( response ) {
 			if (response.data.userFound) {
 				$location.path('/profile');
+				alert(response.data.message);
 			} else {
-				alert('user not found');
+				alert(response.data.message);
 			}
 		});
-	}
+	};
 
 });
